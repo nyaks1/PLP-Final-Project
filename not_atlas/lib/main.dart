@@ -3,10 +3,13 @@ import 'splash_screen.dart';
 import 'home_screen.dart';
 import 'login_screen.dart';
 import 'logindetails_screen.dart';
+import 'create_account.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,8 +19,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashScreen(),
         '/home': (context) => HomeScreen(),
         '/login': (context) => LoginScreen(),
-        '/logindetails': (context) =>
-            LoginDetailsScreen() // Add your login screen route here
+        '/logindetails': (context) => LoginDetailsScreen(),
+        '/create': (context) => CreateAccountScreen(),
       },
     );
   }
