@@ -12,14 +12,15 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
-
-    Navigator.pushReplacement(context, '/home')});
+      Navigator.pushReplacement(context, '/home');
+    });
   }
-  @override
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('Not Atlas'),
+      body: Center(
+        child: Text('Not Atlas'),
       ),
     );
   }
