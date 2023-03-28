@@ -1,20 +1,19 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  SplashScreenState createState() => SplashScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, '/home');
+      Navigator.pushReplacementNamed(context, '/login');
     });
   }
 
