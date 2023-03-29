@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:not_atlas/suicide.dart';
+import 'depression.dart';
+import 'suicide.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -37,7 +38,10 @@ class HomeScreen extends StatelessWidget {
                   child: const Text('Depression'),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(
+                                   context,
+                                   MaterialPageRoute(builder: (context) => const DepressionScreen()),
+                                  );},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.lightBlue,
                   ),
