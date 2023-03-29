@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:not_atlas/suicide.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                   child: const Text('Suicide'),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.pushNamed(context, SuicideGroupScreen.routeName);},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.yellow,
                   ),
