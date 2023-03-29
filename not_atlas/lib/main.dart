@@ -3,6 +3,7 @@ import 'splash_screen.dart';
 import 'login_screen.dart';
 import 'logindetails_screen.dart';
 import 'create_account.dart';
+import 'forgot_password.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,10 +16,11 @@ class MyApp extends StatelessWidget {
       title: 'Not-Atlas',
       initialRoute: '/', // Define your initial route
       routes: {
-        '/splash': (context) => SplashScreen(),       
+        '/splash': (context) => const SplashScreen(),       
         '/login': (context) => LoginScreen(),
         '/logindetails': (context) => LoginDetailsScreen(),
-        '/create': (context) => CreateAccountScreen(),
+        '/create': (context) => const CreateAccountScreen(),
+        '/forgot':(context) => const ForgotPasswordScreen(),
       },
     );
   }

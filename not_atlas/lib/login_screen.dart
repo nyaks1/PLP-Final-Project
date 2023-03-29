@@ -5,7 +5,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Not-Atlas'),
+        title: const Text('Not-Atlas'),
       ),
       body: Container(
         color: Colors.purple, // Set the background color
@@ -13,19 +13,19 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
+              const Text(
                 'Welcome to Not-Atlas!',
                 style: TextStyle(fontSize: 24),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Sign in'),
+                child: const Text('Sign in'),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               OutlinedButton(
                 onPressed: () {},
-                child: Text('Sign up'),
+                child: const Text('Sign up'),
               ),
             ],
           ),
