@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:country_picker/country_picker.dart';
 import 'package:not_atlas/widget/triggers.dart';
+import 'package:not_atlas/widget/communication.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -107,7 +108,7 @@ class ProfileScreen extends StatelessWidget {
               style: TextStyle(fontSize: 16.0),
             ),
             const SizedBox(height: 8.0),
-            CommunicationWidget(),
+            const CommunicationWidget(),
             const SizedBox(height: 16.0),
             const Text(
               'Do you have additional emotional support?',

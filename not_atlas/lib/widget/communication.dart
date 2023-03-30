@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CommunicationWidget extends StatefulWidget {
+  const CommunicationWidget({super.key});
+
   @override
   _CommunicationWidgetState createState() => _CommunicationWidgetState();
 }
@@ -15,35 +17,35 @@ class _CommunicationWidgetState extends State<CommunicationWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Communication Preferences',
           style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         CheckboxListTile(
-          title: Text('Voice Call'),
+          title: const Text('Voice Call'),
           value: _voiceCall,
           onChanged: (value) {
             setState(() {
-              _voiceCall = value;
+              _voiceCall = value!;
             });
           },
         ),
         CheckboxListTile(
-          title: Text('Text'),
+          title: const Text('Text'),
           value: _text,
           onChanged: (value) {
             setState(() {
-              _text = value;
+              _text = value!;
             });
           },
         ),
         CheckboxListTile(
-          title: Text('Video Call'),
+          title: const Text('Video Call'),
           value: _videoCall,
           onChanged: (value) {
             setState(() {
-              _videoCall = value;
+              _videoCall = value!;
             });
           },
         ),
