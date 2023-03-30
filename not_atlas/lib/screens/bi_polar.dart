@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BipolarScreen extends StatelessWidget {
+static const String routeName = '/bipolar';
+
   const BipolarScreen({Key? key}) : super(key: key);
 
   @override

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PTSD extends StatelessWidget {
+static const String routeName = '/ptsd';
+
   const PTSD({Key? key}) : super(key: key);
 
   @override

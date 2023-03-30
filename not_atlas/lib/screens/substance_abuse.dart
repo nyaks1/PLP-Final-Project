@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SubstanceAbuseScreen extends StatelessWidget {
+static const String routeName = '/substanceabuse';
+
   const SubstanceAbuseScreen({Key? key}) : super(key: key);
 
   @override

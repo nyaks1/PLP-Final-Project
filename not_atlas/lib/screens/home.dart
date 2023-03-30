@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'depression.dart';
-import 'suicide.dart';
 import 'anxiety.dart';
-import 'notification.dart';
+import 'bi_polar.dart';
+import 'depression.dart';
+import 'ptsd.dart';
+import 'substance_abuse.dart';
+import 'suicide.dart';
+import 'inbox.dart';
 import 'profile.dart';
 import 'store.dart';
 import 'new_group.dart';
-import 'inbox.dart';
+import 'notification.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,7 +34,9 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, SuicideGroupScreen.routeName);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.lightGreen,
                   ),
@@ -38,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, SuicideGroupScreen.routeName);
+                    Navigator.pushNamed(context, DepressionScreen.routeName);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.yellow,
@@ -46,7 +52,9 @@ class HomeScreen extends StatelessWidget {
                   child: const Text('Depression'),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, AnxietyScreen.routeName);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.lightBlue,
                   ),
@@ -59,19 +67,32 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, PTSD.routeName);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.purple[200],
                   ),
                   child: const Text('Post-Traumatic Stress Disorder'),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, SubstanceAbuseScreen.routeName);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.brown[300],
                   ),
                   child: const Text('Substance Abuse'),
                 ),
+                  ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, BipolarScreen.routeName);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey[700],
+                  ),
+                  child: const Text('Bipolar Disorder'),
+                  )
               ],
             ),
           ],

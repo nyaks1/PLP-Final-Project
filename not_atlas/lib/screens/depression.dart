@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DepressionScreen extends StatelessWidget {
+static const String routeName = '/depression';
+
   const DepressionScreen({super.key});
 
   @override

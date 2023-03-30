@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AnxietyScreen extends StatelessWidget {
-  
+  static const String routeName = '/anxiety';
+
 
   const AnxietyScreen({Key? key}) : super(key: key);
 
