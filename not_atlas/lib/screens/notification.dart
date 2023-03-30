@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class NotificationScreen extends StatelessWidget {
+static const routeName = '/notification';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Notifications'),
+        title: const Text('Notifications'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('No notifications yet.'),
       ),
     );

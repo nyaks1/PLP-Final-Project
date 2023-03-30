@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class AddGroupScreen extends StatefulWidget {
+static const routeName = '/add';
+
   const AddGroupScreen({Key? key}) : super(key: key);
 
   @override

@@ -7,6 +7,8 @@ import 'package:not_atlas/widget/emotional_support.dart';
 import 'package:not_atlas/widget/select_date.dart';
 
 class ProfileScreen extends StatelessWidget {
+static const routeName = '/profile';
+
   const ProfileScreen({Key? key});
 
   @override

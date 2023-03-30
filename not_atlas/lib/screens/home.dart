@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'depression.dart';
 import 'suicide.dart';
 import 'anxiety.dart';
+import 'notification.dart';
+import 'profile.dart';
+import 'store.dart';
+import 'new_group.dart';
+import 'inbox.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -32,7 +37,9 @@ class HomeScreen extends StatelessWidget {
                   child: const Text('Suicide'),
                 ),
                 ElevatedButton(
-                  onPressed: () {Navigator.pushNamed(context, SuicideGroupScreen.routeName);},
+                  onPressed: () {
+                    Navigator.pushNamed(context, SuicideGroupScreen.routeName);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.yellow,
                   ),
@@ -74,35 +81,56 @@ class HomeScreen extends StatelessWidget {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.mic),
-            label: 'Talk',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
-            label: 'New Group',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
-            label: 'Notifications',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.inbox),
-            label: 'Inbox',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.store),
-            label: 'Store',
           ),
         ],
-        selectedItemColor: Colors.blue[800],
+        selectedItemColor: Colors.purple,
         unselectedItemColor: Colors.grey[500],
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              // do nothing since we are already on the home screen
+              break;
+            case 1:
+              // navigate to the mic screen
+              break;
+            case 2:
+              Navigator.pushNamed(context, ProfileScreen.routeName);
+              break;
+            case 3:
+              Navigator.pushNamed(context, AddGroupScreen.routeName);
+              break;
+            case 4:
+              Navigator.pushNamed(context, NotificationScreen.routeName);
+              break;
+            case 5:
+              Navigator.pushNamed(context, InboxScreen.routeName);
+              break;
+            case 6:
+              Navigator.pushNamed(context, StoreScreen.routeName);
+              break;
+            default:
+              // do nothing
+              break;
+          }
+        },
       ),
     );
   }
