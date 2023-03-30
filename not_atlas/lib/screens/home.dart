@@ -11,7 +11,7 @@ import 'store.dart';
 import 'new_group.dart';
 import 'notification.dart';
 import 'settings.dart';
-
+import 'psychology.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -84,14 +84,15 @@ class HomeScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, SubstanceAbuseScreen.routeName);
+                    Navigator.pushNamed(
+                        context, SubstanceAbuseScreen.routeName);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.brown[300],
                   ),
                   child: const Text('Substance Abuse'),
                 ),
-                  ElevatedButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, BipolarScreen.routeName);
                   },
@@ -99,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                     backgroundColor: Colors.grey[700],
                   ),
                   child: const Text('Bipolar Disorder'),
-                  )
+                )
               ],
             ),
           ],
@@ -153,6 +154,9 @@ class HomeScreen extends StatelessWidget {
               break;
             case 6:
               Navigator.pushNamed(context, StoreScreen.routeName);
+              break;
+            case 7:
+              Navigator.pushNamed(context, PsychologistScreen.routeName);
               break;
             default:
               // do nothing
