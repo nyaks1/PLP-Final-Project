@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'splash_screen.dart';
-import 'login_screen.dart';
-import 'logindetails_screen.dart';
-import 'create_account.dart';
-import 'forgot_password.dart';
-import 'home.dart';
+import 'screens/splash_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/logindetails_screen.dart';
+import 'screens/create_account.dart';
+import 'screens/forgot_password.dart';
+import 'screens/home.dart';
 
 void main() => runApp(const MyApp());
 

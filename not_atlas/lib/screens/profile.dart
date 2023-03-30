@@ -4,14 +4,16 @@ import 'package:country_picker/country_picker.dart';
 import 'package:not_atlas/widget/triggers.dart';
 import 'package:not_atlas/widget/communication.dart';
 import 'package:not_atlas/widget/emotional_support.dart';
+import 'package:not_atlas/widget/select_date.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  const ProfileScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
     DateTime startDate = DateTime(1800);
     DateTime endDate = DateTime.now();
+    List<DateTime> selectedDates = [DateTime(1990)];
 
     return Scaffold(
       appBar: AppBar(
@@ -53,13 +55,23 @@ class ProfileScreen extends StatelessWidget {
               style: TextStyle(fontSize: 16.0),
             ),
             const SizedBox(height: 8.0),
-            CalendarDatePicker2(
-              config: CalendarDatePicker2Config(
-                startDate: startDate,
-                endDate: endDate,
-              ),
-              initialSelectedDate: startDate,
-              onValueChanged: (date) {}, value: const [1900],
+            ElevatedButton(
+              onPressed: () async {
+                var result = await showCalendarDatePicker2Dialog(
+                  context: context,
+                  config: CalendarDatePicker2WithActionButtonsConfig(
+                    firstDate: startDate,
+                    lastDate: endDate,
+                  ),
+                  dialogSize: const Size(325, 400),
+                  value: selectedDates,
+                  borderRadius: BorderRadius.circular(15),
+                );
+                if (result != null) {
+                  selectedDates = [];
+                }
+              },
+              child: Text(selectedDates[0].toString()),
             ),
             const SizedBox(height: 16.0),
             const Text(
