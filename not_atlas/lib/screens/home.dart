@@ -10,6 +10,7 @@ import 'profile.dart';
 import 'store.dart';
 import 'new_group.dart';
 import 'notification.dart';
+import 'settings.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -20,6 +21,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Not-Atlas'),
+        leading: IconButton(
+          icon: const Icon(Icons.settings),
+          onPressed: () {
+            Navigator.pushNamed(context, SettingsScreen.routeName);
+          },
+        ),
       ),
       body: Center(
         child: Column(
