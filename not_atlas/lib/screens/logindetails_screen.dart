@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'settings.dart';
 
 class LoginDetailsScreen extends StatelessWidget {
+  static String routeName = '/settings';
+
+
   const LoginDetailsScreen({super.key});
 
   @override
@@ -46,7 +50,9 @@ class LoginDetailsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, SettingsScreen.routeName);
+              },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.deepPurpleAccent),
               ),
