@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,16 +14,19 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-         Navigator.pushReplacementNamed(context, '/login');  
-           }
-           );
+      Navigator.pushReplacementNamed(context, '/login');
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Not Atlas'),
+        child: SvgPicture.asset(
+          'assets/N.svg',
+          width: 200,
+          height: 200,
+        ),
       ),
     );
   }
