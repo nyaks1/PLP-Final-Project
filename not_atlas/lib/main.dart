@@ -5,17 +5,20 @@ import 'screens/logindetails_screen.dart';
 import 'screens/create_account.dart';
 import 'screens/forgot_password.dart';
 import 'screens/home.dart';
+import 'model/user.dart';
+import 'model/post.dart';
+import 'model/comment.dart';
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Not-Atlas',
-      initialRoute: '/', // Define your initial route
+      initialRoute: '/splash', // Define your initial route
       routes: {
         '/splash': (context) => const SplashScreen(),
         '/login': (context) => LoginScreen(),
@@ -27,3 +30,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
