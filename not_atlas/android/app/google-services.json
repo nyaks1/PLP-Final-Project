@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "542560367660",
+    "firebase_url": "https://not-atlas-default-rtdb.firebaseio.com",
+    "project_id": "not-atlas",
+    "storage_bucket": "not-atlas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542560367660:android:5c816b7bbb457255ab8d89",
+        "android_client_info": {
+          "package_name": "com.example.final_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542560367660-493hkt25jedcf8rvb9jidpgqfj1tq0h4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnKoBuEJc-irFXKlC_vxjl49SD7VrqY0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542560367660-493hkt25jedcf8rvb9jidpgqfj1tq0h4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
